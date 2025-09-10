@@ -1,0 +1,93 @@
+[
+  {
+    "inputs": [
+      {"internalType": "string", "name": "metadataCID", "type": "string"},
+      {"internalType": "uint256", "name": "priceWei", "type": "uint256"}
+    ],
+    "name": "createBatch",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {"internalType": "uint256", "name": "batchId", "type": "uint256"},
+      {"internalType": "uint256", "name": "priceWei", "type": "uint256"}
+    ],
+    "name": "listBatch",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {"internalType": "uint256", "name": "batchId", "type": "uint256"},
+      {"internalType": "uint256", "name": "value", "type": "uint256"}
+    ],
+    "name": "fundEscrow",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "uint256", "name": "batchId", "type": "uint256"}],
+    "name": "markDelivered",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "uint256", "name": "batchId", "type": "uint256"}],
+    "name": "releaseToFarmer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "uint256", "name": "batchId", "type": "uint256"}],
+    "name": "refundBuyer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "uint256", "name": "batchId", "type": "uint256"}],
+    "name": "getBatch",
+    "outputs": [
+      {
+        "components": [
+          {"internalType": "uint256", "name": "id", "type": "uint256"},
+          {"internalType": "address", "name": "farmer", "type": "address"},
+          {"internalType": "string", "name": "ipfsHash", "type": "string"},
+          {"internalType": "uint256", "name": "quantity", "type": "uint256"},
+          {"internalType": "uint256", "name": "pricePerKg", "type": "uint256"},
+          {"internalType": "uint256", "name": "qualityScore", "type": "uint256"},
+          {"internalType": "uint256", "name": "listingTimestamp", "type": "uint256"},
+          {"internalType": "enum FarmMateLedger.BatchStatus", "name": "status", "type": "uint8"},
+          {"internalType": "address", "name": "buyer", "type": "address"},
+          {"internalType": "uint256", "name": "escrowAmount", "type": "uint256"},
+          {"internalType": "uint256", "name": "incentiveAmount", "type": "uint256"}
+        ],
+        "internalType": "struct FarmMateLedger.ProduceBatch",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "uint256", "name": "batchId", "type": "uint256"}],
+    "name": "getProvenanceCIDs",
+    "outputs": [{"internalType": "string[]", "name": "", "type": "string[]"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "address", "name": "account", "type": "address"}],
+    "name": "incentivePoints",
+    "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

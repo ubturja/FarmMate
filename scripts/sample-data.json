@@ -1,0 +1,460 @@
+{
+  "users": [
+    {
+      "walletAddress": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "role": "farmer",
+      "name": "John Smith",
+      "email": "john@sunrisefarm.com",
+      "phone": "+1-555-0123",
+      "location": "Napa Valley, California",
+      "isVerified": true,
+      "incentivePoints": 1500
+    },
+    {
+      "walletAddress": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "role": "farmer",
+      "name": "Maria Garcia",
+      "email": "maria@riograndefarm.com",
+      "phone": "+1-555-0456",
+      "location": "McAllen, Texas",
+      "isVerified": true,
+      "incentivePoints": 2200
+    },
+    {
+      "walletAddress": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "role": "buyer",
+      "name": "Green Grocer Co.",
+      "email": "orders@greengrocer.com",
+      "phone": "+1-555-0789",
+      "location": "New York, USA",
+      "isVerified": true,
+      "incentivePoints": 0
+    },
+    {
+      "walletAddress": "0x90F79bf6EB2c4f870365E785982E1f101E9b2Be6",
+      "role": "auditor",
+      "name": "AgriCert Inc.",
+      "email": "audit@agricert.com",
+      "phone": "+1-555-0321",
+      "location": "Oregon, USA",
+      "isVerified": true,
+      "incentivePoints": 0
+    }
+  ],
+  "farms": [
+    {
+      "name": "Sunrise Organic Farm",
+      "location": "Napa Valley, California",
+      "coordinates": {
+        "lat": 38.2975,
+        "lng": -122.2869
+      },
+      "size": 25.5,
+      "soilType": "loam",
+      "certification": [
+        {
+          "type": "organic",
+          "issuer": "USDA",
+          "validUntil": "2025-12-31"
+        },
+        {
+          "type": "sustainable",
+          "issuer": "California Organic",
+          "validUntil": "2024-12-31"
+        }
+      ],
+      "isActive": true
+    },
+    {
+      "name": "Rio Grande Valley Farm",
+      "location": "McAllen, Texas",
+      "coordinates": {
+        "lat": 26.2034,
+        "lng": -98.2300
+      },
+      "size": 40.0,
+      "soilType": "clay",
+      "certification": [
+        {
+          "type": "sustainable",
+          "issuer": "Texas Organic",
+          "validUntil": "2024-12-31"
+        }
+      ],
+      "isActive": true
+    },
+    {
+      "name": "Mountain View Farm",
+      "location": "Denver, Colorado",
+      "coordinates": {
+        "lat": 39.7392,
+        "lng": -104.9903
+      },
+      "size": 15.0,
+      "soilType": "sandy",
+      "certification": [],
+      "isActive": true
+    }
+  ],
+  "produceBatches": [
+    {
+      "batchId": 1,
+      "cropType": "tomato",
+      "variety": "Roma",
+      "quantity": 500.0,
+      "unit": "kg",
+      "harvestDate": "2024-01-15",
+      "qualityScore": 85,
+      "dataVerified": true,
+      "priceWei": "1000000000000000000",
+      "state": "Listed",
+      "aiAnalysis": {
+        "disease": "Healthy",
+        "confidence": 0.92,
+        "recommendations": ["Continue current practices", "Monitor regularly"],
+        "severity": "None"
+      },
+      "images": [
+        {
+          "url": "https://example.com/images/tomato-roma-1.jpg",
+          "ipfsHash": "QmSampleHash1",
+          "type": "harvest",
+          "aiAnalysis": {
+            "overall_score": 85,
+            "breakdown": {
+              "color": 88,
+              "size": 82,
+              "defects": 90,
+              "freshness": 85
+            },
+            "grade": "A"
+          }
+        }
+      ],
+      "provenanceCIDs": [
+        "QmProvenanceHash1",
+        "QmProvenanceHash2"
+      ]
+    },
+    {
+      "batchId": 2,
+      "cropType": "tomato",
+      "variety": "Cherry",
+      "quantity": 200.0,
+      "unit": "kg",
+      "harvestDate": "2024-01-20",
+      "qualityScore": 78,
+      "dataVerified": true,
+      "priceWei": "1200000000000000000",
+      "state": "Listed",
+      "aiAnalysis": {
+        "disease": "Leaf Spot",
+        "confidence": 0.75,
+        "recommendations": ["Apply fungicide", "Improve air circulation", "Remove affected leaves"],
+        "severity": "Medium"
+      },
+      "images": [
+        {
+          "url": "https://example.com/images/tomato-cherry-1.jpg",
+          "ipfsHash": "QmSampleHash2",
+          "type": "harvest",
+          "aiAnalysis": {
+            "overall_score": 78,
+            "breakdown": {
+              "color": 75,
+              "size": 80,
+              "defects": 70,
+              "freshness": 85
+            },
+            "grade": "B"
+          }
+        }
+      ],
+      "provenanceCIDs": [
+        "QmProvenanceHash3"
+      ]
+    },
+    {
+      "batchId": 3,
+      "cropType": "potato",
+      "variety": "Russet",
+      "quantity": 1000.0,
+      "unit": "kg",
+      "harvestDate": "2024-01-18",
+      "qualityScore": 92,
+      "dataVerified": true,
+      "priceWei": "800000000000000000",
+      "state": "EscrowFunded",
+      "buyerAddress": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "aiAnalysis": {
+        "disease": "Healthy",
+        "confidence": 0.95,
+        "recommendations": ["Excellent quality", "Ready for premium market"],
+        "severity": "None"
+      },
+      "images": [
+        {
+          "url": "https://example.com/images/potato-russet-1.jpg",
+          "ipfsHash": "QmSampleHash3",
+          "type": "harvest",
+          "aiAnalysis": {
+            "overall_score": 92,
+            "breakdown": {
+              "color": 90,
+              "size": 95,
+              "defects": 88,
+              "freshness": 95
+            },
+            "grade": "A+"
+          }
+        }
+      ],
+      "provenanceCIDs": [
+        "QmProvenanceHash4",
+        "QmProvenanceHash5",
+        "QmProvenanceHash6"
+      ]
+    },
+    {
+      "batchId": 4,
+      "cropType": "corn",
+      "variety": "Sweet Corn",
+      "quantity": 750.0,
+      "unit": "kg",
+      "harvestDate": "2024-01-22",
+      "qualityScore": 88,
+      "dataVerified": true,
+      "priceWei": "1500000000000000000",
+      "state": "Delivered",
+      "buyerAddress": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "aiAnalysis": {
+        "disease": "Healthy",
+        "confidence": 0.89,
+        "recommendations": ["Maintain current practices", "Ready for market"],
+        "severity": "None"
+      },
+      "images": [
+        {
+          "url": "https://example.com/images/corn-sweet-1.jpg",
+          "ipfsHash": "QmSampleHash4",
+          "type": "harvest",
+          "aiAnalysis": {
+            "overall_score": 88,
+            "breakdown": {
+              "color": 90,
+              "size": 85,
+              "defects": 90,
+              "freshness": 87
+            },
+            "grade": "A"
+          }
+        }
+      ],
+      "provenanceCIDs": [
+        "QmProvenanceHash7",
+        "QmProvenanceHash8"
+      ]
+    }
+  ],
+  "provenanceNotes": [
+    {
+      "type": "harvest",
+      "description": "Tomatoes harvested from field A, row 3-5",
+      "location": "Napa Valley, California",
+      "actor": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "timestamp": "2024-01-15T08:30:00Z",
+      "metadata": {
+        "field": "A",
+        "rows": "3-5",
+        "harvestMethod": "hand-picked",
+        "weather": "sunny",
+        "temperature": "22°C"
+      }
+    },
+    {
+      "type": "transport",
+      "description": "Batch transported to processing facility",
+      "location": "Napa Valley Processing Center",
+      "actor": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "timestamp": "2024-01-15T14:00:00Z",
+      "metadata": {
+        "transportMethod": "refrigerated truck",
+        "temperature": "4°C",
+        "driver": "John Smith",
+        "vehicleId": "TRK-001"
+      }
+    },
+    {
+      "type": "storage",
+      "description": "Batch stored in climate-controlled warehouse",
+      "location": "Napa Valley Storage Facility",
+      "actor": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "timestamp": "2024-01-15T16:00:00Z",
+      "metadata": {
+        "warehouse": "NV-001",
+        "temperature": "2°C",
+        "humidity": "85%",
+        "storageMethod": "pallets"
+      }
+    },
+    {
+      "type": "processing",
+      "description": "Quality inspection and grading completed",
+      "location": "Napa Valley Processing Center",
+      "actor": "0x90F79bf6EB2c4f870365E785982E1f101E9b2Be6",
+      "timestamp": "2024-01-16T10:00:00Z",
+      "metadata": {
+        "inspector": "AgriCert Inc.",
+        "grade": "A",
+        "qualityScore": 85,
+        "aiVerified": true,
+        "certification": "organic"
+      }
+    }
+  ],
+  "aiModels": {
+    "diseaseDetection": {
+      "modelType": "MobileNet",
+      "version": "1.0.0",
+      "accuracy": 0.89,
+      "classes": ["Healthy", "Leaf Spot", "Powdery Mildew", "Rust", "Blight", "Anthracnose", "Bacterial Spot", "Virus"],
+      "inputSize": [224, 224, 3],
+      "preprocessing": ["resize", "normalize", "rgb_convert"]
+    },
+    "qualityScoring": {
+      "modelType": "Custom CNN",
+      "version": "1.0.0",
+      "accuracy": 0.85,
+      "factors": ["color", "size", "shape", "defects", "freshness"],
+      "inputSize": [224, 224, 3],
+      "preprocessing": ["resize", "normalize", "rgb_convert"]
+    },
+    "yieldForecasting": {
+      "modelType": "LSTM",
+      "version": "1.0.0",
+      "accuracy": 0.82,
+      "features": ["temperature", "rainfall", "humidity", "soilPh", "organicMatter", "irrigation", "pestControl", "fertilization"],
+      "sequenceLength": 30,
+      "preprocessing": ["normalize", "sequence_padding"]
+    },
+    "priceForecasting": {
+      "modelType": "Linear Regression",
+      "version": "1.0.0",
+      "accuracy": 0.78,
+      "features": ["season", "demand", "supply", "quality", "market_trends"],
+      "preprocessing": ["normalize", "feature_engineering"]
+    }
+  },
+  "federatedLearning": {
+    "globalModel": {
+      "version": "1.0.0",
+      "totalSamples": 5000,
+      "clientCount": 15,
+      "lastUpdated": "2024-01-20T12:00:00Z",
+      "performance": {
+        "accuracy": 0.87,
+        "precision": 0.85,
+        "recall": 0.83,
+        "f1Score": 0.84
+      }
+    },
+    "participatingFarms": [
+      "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "0x90F79bf6EB2c4f870365E785982E1f101E9b2Be6"
+    ],
+    "privacySettings": {
+      "differentialPrivacyEpsilon": 1.0,
+      "noiseScale": 0.1,
+      "secureAggregation": true,
+      "dataAnonymization": true
+    }
+  },
+  "marketData": {
+    "cropPrices": {
+      "tomato": {
+        "current": 2.50,
+        "trend": "increasing",
+        "volatility": 0.15,
+        "seasonalFactor": 1.1
+      },
+      "potato": {
+        "current": 1.20,
+        "trend": "stable",
+        "volatility": 0.08,
+        "seasonalFactor": 0.9
+      },
+      "corn": {
+        "current": 1.50,
+        "trend": "decreasing",
+        "volatility": 0.12,
+        "seasonalFactor": 1.2
+      },
+      "wheat": {
+        "current": 0.80,
+        "trend": "stable",
+        "volatility": 0.10,
+        "seasonalFactor": 1.0
+      },
+      "rice": {
+        "current": 1.80,
+        "trend": "increasing",
+        "volatility": 0.18,
+        "seasonalFactor": 1.3
+      }
+    },
+    "marketTrends": {
+      "organicDemand": "increasing",
+      "sustainabilityFocus": "high",
+      "localSourcing": "increasing",
+      "technologyAdoption": "moderate"
+    }
+  },
+  "testScenarios": [
+    {
+      "name": "Complete Farm-to-Table Journey",
+      "description": "Test the complete flow from farm creation to final sale",
+      "steps": [
+        "Create farmer user",
+        "Create farm",
+        "Create produce batch",
+        "AI analysis of batch",
+        "List batch for sale",
+        "Buyer funds escrow",
+        "Farmer marks delivered",
+        "Buyer releases funds",
+        "Add provenance notes"
+      ]
+    },
+    {
+      "name": "AI Disease Detection",
+      "description": "Test AI disease detection with various crop images",
+      "steps": [
+        "Upload healthy crop image",
+        "Upload diseased crop image",
+        "Verify AI analysis results",
+        "Check recommendations"
+      ]
+    },
+    {
+      "name": "Federated Learning",
+      "description": "Test federated learning model updates",
+      "steps": [
+        "Submit model update from farm 1",
+        "Submit model update from farm 2",
+        "Trigger model aggregation",
+        "Verify global model update"
+      ]
+    },
+    {
+      "name": "Provenance Verification",
+      "description": "Test provenance tracking and verification",
+      "steps": [
+        "Add provenance notes",
+        "Verify batch authenticity",
+        "Check blockchain consistency",
+        "Generate QR code data"
+      ]
+    }
+  ]
+}

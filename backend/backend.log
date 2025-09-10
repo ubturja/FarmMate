@@ -1,0 +1,17 @@
+nohup: ignoring input
+Database connection established successfully.
+Database synchronized successfully.
+FarmMate backend server running on port 3001
+Health check: http://localhost:3001/health
+Get provenance error: TypeError: ProduceBatch.findOne is not a function
+    at /home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/routes/provenance.js:12:38
+    at Layer.handle [as handle_request] (/home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/node_modules/express/lib/router/index.js:284:15
+    at param (/home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/node_modules/express/lib/router/index.js:365:14)
+    at param (/home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/node_modules/express/lib/router/index.js:376:14)
+    at Function.process_params (/home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/node_modules/express/lib/router/index.js:421:3)
+    at next (/home/turja/Projects/FarmMate (2) /farmmate-prototype/backend/node_modules/express/lib/router/index.js:280:10)
+Shutting down server...
